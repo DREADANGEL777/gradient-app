@@ -1,0 +1,16 @@
+.new-wrapper {
+  min-height: 80vh;
+  width: 100%;
+}
+
+.new-cont {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.new {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

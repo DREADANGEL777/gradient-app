@@ -1,0 +1,16 @@
+.edit-wrapper {
+  min-height: 80vh;
+  width: 100%;
+}
+
+.edit-cont {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.edit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,16 @@
+.navbar-wrapper {
+  min-height: 20vh;
+  width: 100%;
+}
+
+.navbar-cont {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
