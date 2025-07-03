@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import GradientItem from "../components/GradientItem"
-import './CSS/Home.css';
+import "./CSS/Home.css"
 
 export default function Home({ gradients, setGradients }) {
   const handleDelete = (id) => {
@@ -12,9 +12,12 @@ export default function Home({ gradients, setGradients }) {
       <div className="home-cont">
         <div className="home">
           <h2>Gradient List</h2>
-          {gradients.map((g) => (
-            <GradientItem key={g.id} gradient={g} onDelete={handleDelete} />
-          ))}
+
+          <div className="gradients-cont">
+            {gradients.map((g) => (
+              <GradientItem key={g.id} gradient={g} onDelete={handleDelete} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,10 @@
 .new-wrapper {
   min-height: 80vh;
   width: 100%;
+  background: rgb(255, 0, 204);
+  color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .new-cont {
@@ -11,6 +15,55 @@
 .new {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.new-mini-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.new-btn {
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  background: rgb(255, 0, 204);
+  outline: none;
+  transition: all 0.5s;
+}
+
+.new-btn:hover {
+  border: 2px solid #fff;
+  color: rgb(255, 0, 204);
+  background: #fff;
+}
+
+.new-btn:disabled {
+  background: gray;
+  color: #fff;
+}
+
+.new-mini-cont div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.new-mini-cont div input {
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  background: rgb(255, 0, 204);
+  outline: none;
+}
+
+.new-mini-cont div input::placeholder {
+  color: #fff;
 }

@@ -22,12 +22,24 @@ export default function NewGradient({ setGradients }) {
     <div className="new-wrapper">
       <div className="new-cont">
         <div className="new">
-          <h2>Add New Gradient</h2>
-          <input value={color1} onChange={(e) => setColor1(e.target.value)} placeholder="#000000" />
-          <input value={color2} onChange={(e) => setColor2(e.target.value)} placeholder="#ffffff" />
-          <button onClick={handleAdd} disabled={disabled}>
-            Add Gradient
-          </button>
+          <h2>ADD NEW GRADIENT</h2>
+          <div className="new-mini-cont">
+            <div>
+              <input
+                value={color1}
+                onChange={(e) => setColor1(e.target.value)}
+                placeholder="#000000"
+              />
+              <input
+                value={color2}
+                onChange={(e) => setColor2(e.target.value)}
+                placeholder="#ffffff"
+              />
+            </div>
+            <button onClick={handleAdd} disabled={disabled} className="new-btn">
+              Add Gradient
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -7,8 +7,12 @@ const Navbar = () => {
     <div className="navbar-wrapper">
       <div className="navbar-cont">
         <div className="navbar">
-          <Link to="/">Home</Link>
-          <Link to="/new">New</Link>
+          <Link to="/" className="nav-link">
+            HOME
+          </Link>
+          <Link to="/new" className="nav-link">
+            NEW
+          </Link>
         </div>
       </div>
     </div>

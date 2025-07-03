@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom"
+import './CSS/GradientItem.css'
 
 export default function GradientItem({ gradient, onDelete }) {
   const { id, color1, color2 } = gradient
   return (
-    <div
-      className="gradient-cont"
-      style={{
-        display: "flex",
-      }}
-    >
+    <div className="gradient-cont">
       <div
         style={{
           background: `linear-gradient(to right, ${color1}, ${color2})`,
@@ -24,10 +20,14 @@ export default function GradientItem({ gradient, onDelete }) {
         <div>
           {color1} → {color2}
         </div>
-        <button onClick={() => onDelete(id)}>Delete</button>
-        <Link to={`/edit/${id}`}>
-          <button>Edit</button>
-        </Link>
+        <div className="btn-cont">
+          <button onClick={() => onDelete(id)} className="item-btn">
+            Delete
+          </button>
+          <Link to={`/edit/${id}`}>
+            <button className="item-btn">Edit</button>
+          </Link>
+        </div>
       </div>
     </div>
   )

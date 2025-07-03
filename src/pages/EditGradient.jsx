@@ -31,11 +31,15 @@ export default function EditGradient({ gradients, setGradients }) {
       <div className="edit-cont">
         <div className="edit">
           <h2>Edit Gradient</h2>
-          <input value={color1} onChange={(e) => setColor1(e.target.value)} />
-          <input value={color2} onChange={(e) => setColor2(e.target.value)} />
-          <button onClick={handleEdit} disabled={disabled}>
-            Save Changes
-          </button>
+          <div className="edit-mini-cont">
+            <div>
+              <input value={color1} onChange={(e) => setColor1(e.target.value)} />
+              <input value={color2} onChange={(e) => setColor2(e.target.value)} />
+              <button onClick={handleEdit} disabled={disabled} className="edit-btn">
+                Save Changes
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
