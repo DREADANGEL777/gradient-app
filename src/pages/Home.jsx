@@ -4,7 +4,8 @@ import "./CSS/Home.css"
 
 export default function Home({ gradients, setGradients }) {
   const handleDelete = (id) => {
-    setGradients(gradients.filter((g) => g.id !== id))
+    const updated = gradients.filter((g) => g.id !== id)
+    setGradients(updated)
   }
 
   return (
@@ -12,7 +13,6 @@ export default function Home({ gradients, setGradients }) {
       <div className="home-cont">
         <div className="home">
           <h2>Gradient List</h2>
-
           <div className="gradients-cont">
             {gradients.map((g) => (
               <GradientItem key={g.id} gradient={g} onDelete={handleDelete} />

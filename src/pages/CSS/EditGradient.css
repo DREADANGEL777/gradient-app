@@ -1,8 +1,8 @@
 .edit-wrapper {
   min-height: 80vh;
   width: 100%;
-  background: rgb(255, 0, 204);
-  color: #fff;
+  background: rgb(255, 255, 255);
+  color: #000000;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -10,6 +10,7 @@
 .edit-cont {
   margin: auto;
   max-width: 1400px;
+  padding: 0 10px;
 }
 
 .edit {
@@ -29,18 +30,17 @@
 
 .edit-btn {
   padding: 10px;
-  border: 2px solid #fff;
-  border-radius: 10px;
   color: #fff;
-  background: rgb(255, 0, 204);
+  background: #018a0a;
+  border: 2px solid #018a0a;
   outline: none;
+  border-radius: 10px;
   transition: all 0.5s;
+  font-size: 14px;
 }
 
 .edit-btn:hover {
-  border: 2px solid #fff;
-  color: rgb(255, 0, 204);
-  background: #fff;
+  opacity: 0.75;
 }
 
 .edit-btn:disabled {
@@ -53,17 +53,73 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .edit-mini-cont div input {
   padding: 10px;
-  border: 2px solid #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
+  border: 2px solid #000;
   border-radius: 10px;
-  color: #fff;
-  background: rgb(255, 0, 204);
+  color: #000000;
+  background: rgb(255, 255, 255);
   outline: none;
+  font-size: 14px;
+  width: 120px;
 }
 
 .edit-mini-cont div input::placeholder {
-  color: #fff;
+  color: #ababab;
+}
+
+@media (max-width: 400px) {
+  .edit-mini-cont div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .edit-mini-cont div input {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .edit-btn {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .edit h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 200px) {
+  .edit-mini-cont div input {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .edit-btn {
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 150px) {
+  .edit-mini-cont div input {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .edit-btn {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .edit h2 {
+    font-size: 16px;
+  }
 }

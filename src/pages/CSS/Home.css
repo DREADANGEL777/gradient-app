@@ -1,8 +1,8 @@
 .home-wrapper {
   min-height: 80vh;
   width: 100%;
-  background: rgb(255, 0, 204);
-  color: #fff;
+  background: rgb(255, 255, 255);
+  color: #000000;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -10,6 +10,7 @@
 .home-cont {
   margin: auto;
   max-width: 1400px;
+  padding: 0 10px;
 }
 
 .home {
@@ -22,6 +23,21 @@
 
 .gradients-cont {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .gradients-cont {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 200px) {
+  .gradients-cont {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }

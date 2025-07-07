@@ -4,30 +4,146 @@
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  border: 3px solid #fff;
   padding: 10px;
   margin-top: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 6px 12px rgba(36, 119, 3, 0.45);
+  border: 0.5px solid #018a0a;
 }
 
-.item-btn {
-  padding: 5px;
+.item-btn-delete {
+  flex: 0.5;
+  padding: 15px;
   color: #fff;
-  background: rgb(255, 0, 204);
-  border: 2px solid #fff;
+  background: #018a0a;
+  border: 2px solid #018a0a;
   outline: none;
   border-radius: 10px;
   transition: all 0.5s;
+  font-size: 14px;
 }
 
-.item-btn:hover {
-  color: rgb(255, 0, 204);
+.item-btn-delete:hover {
+  opacity: 0.75;
+}
+
+.item-btn-edit {
+  flex: 0.5;
+  padding: 15px;
+  color: #018a0a;
   background: rgb(255, 255, 255);
-  border: 2px solid rgb(255, 0, 204);
+  border: 2px solid #018a0a;
+  outline: none;
+  border-radius: 10px;
+  transition: all 0.5s;
+  font-size: 14px;
+}
+
+.item-btn-edit:hover {
+  background: #dedede;
+}
+
+.item-link {
+  text-decoration: none;
+  color: #018a0a;
+  transition: all 0.5s;
 }
 
 .btn-cont {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
+}
+
+.colors {
+  text-align: center;
+  padding: 15px 0;
+  color: #000000;
+}
+
+.under-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gradient-box {
+  margin-top: 15px;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 270px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 400px) {
+  .gradient-cont {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .gradient-cont > div:first-child {
+    width: 100%;
+    height: 150px;
+  }
+
+  .item-btn-edit {
+    padding: 10px;
+    font-size: 12px;
+    width: 100%;
+  }
+  .item-btn-delete {
+    padding: 10px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .colors {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+
+  .btn-cont {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 200px) {
+  .item-btn {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .colors {
+    font-size: 10px;
+  }
+
+  .gradient-cont > div:first-child {
+    height: 120px;
+  }
+}
+
+@media (max-width: 150px) {
+  .gradient-cont {
+    padding: 3px;
+    margin-top: 10px;
+  }
+
+  .gradient-cont > div:first-child {
+    width: 100%;
+    height: 100px;
+  }
+
+  .item-btn {
+    padding: 6px;
+    font-size: 9px;
+  }
+
+  .colors {
+    font-size: 9px;
+    padding: 5px 0;
+  }
 }
